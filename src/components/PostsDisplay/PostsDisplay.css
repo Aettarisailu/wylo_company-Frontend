@@ -1,0 +1,202 @@
+.posts-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    position: relative; 
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post-input {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.post-input:hover {
+    background-color: #e0e0e0;
+}
+
+.post-input textarea {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    resize: none;
+    font-size: 16px;
+}
+
+.create-post-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Popup Container styles */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure popup is above other content */
+}
+
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .posts-display {
+        padding: 10px;
+    }
+    .user-profile img {
+        width: 40px;
+        height: 40px;
+    }
+    .post-input {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-profile img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Other CSS styles */
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.user-profile p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.post-input {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.post-input textarea {
+    width: 100%;
+    height: 50px;
+    border: none;
+    resize: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popup {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .popup {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .popup {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
